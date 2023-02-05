@@ -30,16 +30,13 @@ const AllNFTaccrossChain = () => {
         // @ts-ignore
         const metaData = allNFTs[i][j].result;
         console.log(metaData);
-        
       }
     }
   };
 
   return (
-    <div style={{marginTop:"30px"}}>
-      <div>
-        Get all the NFTs own by an address cross chain
-      </div>
+    <div style={{ marginTop: "30px" }}>
+      <div>Get all the NFTs own by an address cross chain</div>
       <button onClick={runApp}>click</button>
     </div>
   );

@@ -1,20 +1,29 @@
 import React from "react";
 import Moralis from "moralis";
 import { EvmChain } from "@moralisweb3/common-evm-utils";
+import ABI from "@/constants/ABI";
+import CONTRACT_ADDRESS from "@/constants/ContractAddress";
+import { ethers } from "ethers";
 
-const All_ERC20_token_ownby_address = () => {
+const Run_smartContract_functions = () => {
   const runApp = async () => {
+    
     await Moralis.start({
       apiKey: process.env.NEXT_PUBLIC_API_KEY,
       // ...and any other configuration
     });
 
-    const address = "0x67099d557997E3Ee308B3C49029C331A2d4569Dc";
-
     const chain = EvmChain.GOERLI;
 
-    const response = await Moralis.EvmApi.token.getWalletTokenBalances({
+    const address = CONTRACT_ADDRESS;
+
+    // token 0 address, e.g. WETH token address
+    const functionName = "getMyNum";
+
+    const response = await Moralis.EvmApi.utils.runContractFunction({
       address,
+      functionName,
+      abi: ABI,
       chain,
     });
 
@@ -23,10 +32,10 @@ const All_ERC20_token_ownby_address = () => {
 
   return (
     <div style={{ marginTop: "30px" }}>
-      <div>All_ERC20_token_ownby_address</div>
+      <div>Run_smartContract_functions</div>
       <button onClick={runApp}>click</button>
     </div>
   );
 };
 
-export default All_ERC20_token_ownby_address;
+export default Run_smartContract_functions;
