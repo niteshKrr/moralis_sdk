@@ -28,23 +28,18 @@ const AllNFTaccrossChain = () => {
       //   console.log(allNFTs[i]);
       for (let j = 0; j < allNFTs[i].length; j++) {
         // @ts-ignore
-        const metaData = allNFTs[i][j]._data.metadata;
+        const metaData = allNFTs[i][j].result;
         console.log(metaData);
-        // const name = metaData.name;
-        // const imgLoc = metaData.image;
-        // if (name  !== undefined || imgLoc !== undefined || (name  !== undefined && imgLoc !== undefined)) {
-        //   console.log("name: ", name);
-        //   console.log("image loc: ", imgLoc);
-        // }
-        // else{
-        //     j++;
-        // }
+        
       }
     }
   };
 
   return (
-    <div>
+    <div style={{marginTop:"30px"}}>
+      <div>
+        Get all the NFTs own by an address cross chain
+      </div>
       <button onClick={runApp}>click</button>
     </div>
   );
