@@ -22,14 +22,33 @@ The `pages/api` directory is mapped to `/api/*`. Files in this directory are tre
 
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Learn More
+## Moralis ❤️‍🔥👹
 
-To learn more about Next.js, take a look at the following resources:
+**Moralis** is a service that aggregates many different tools and APIs to glue all that is needed when developing **Web3 dApps**
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+**Step 1**
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+> Go to the [Moralis Dashboard](https://admin.moralis.io/login) to create your Moralis account.
+
+**Step 2**
+
+> 1. Go to https://admin.moralis.io/web3apis.
+> copy your API Key:
+
+**install Moralis SDK**
+```shell
+npm install moralis
+```
+
+### EVM API  💥🚀
+
+*The **Moralis EVM API** enables Web3 developers to build and scale any dapps built on top of EVM blockchains effortlessly. Access all the information you need to index such as NFT, token, balance, and other blockchain-related data from multiple **EVM** blockchains.*
+
+**For EVM API call install**
+
+```shell
+npm install moralis @moralisweb3/common-evm-utils
+```
 
 ## Deploy on Vercel
 
