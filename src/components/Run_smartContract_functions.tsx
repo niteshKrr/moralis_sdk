@@ -3,7 +3,6 @@ import Moralis from "moralis";
 import { EvmChain } from "@moralisweb3/common-evm-utils";
 import ABI from "@/constants/ABI";
 import CONTRACT_ADDRESS from "@/constants/ContractAddress";
-import { ethers } from "ethers";
 
 const Run_smartContract_functions = () => {
   const runApp = async () => {
@@ -17,7 +16,6 @@ const Run_smartContract_functions = () => {
 
     const address = CONTRACT_ADDRESS;
 
-    // token 0 address, e.g. WETH token address
     const functionName = "getMyNum";
 
     const response = await Moralis.EvmApi.utils.runContractFunction({
