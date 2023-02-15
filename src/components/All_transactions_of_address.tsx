@@ -9,19 +9,21 @@ const All_transactions_of_address = () => {
       // ...and any other configuration
     });
 
-    const address = "0x67099d557997E3Ee308B3C49029C331A2d4569Dc";
+    const address = "0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045";
 
-    const chain = EvmChain.GOERLI;
+    const chain = EvmChain.ETHEREUM;
 
     const response = await Moralis.EvmApi.transaction.getWalletTransactions({
       address,
       chain,
     });
 
-    for (let i = 0; i < response.result.length; i++) {
-      // @ts-ignore
-      console.log(response.toJSON().result[i]);
-    }
+    console.log(response.toJSON());
+
+    // for (let i = 0; i < response.result.length; i++) {
+    //   // @ts-ignore
+    //   console.log(response.toJSON().result[i]);
+    // }
   };
 
   return (

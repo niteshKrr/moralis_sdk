@@ -4,6 +4,7 @@ import All_transactions_of_address from "@/components/All_transactions_of_addres
 import Balance_of_address from "@/components/Balance_of_address";
 import Events_for_a_contract from "@/components/event_api/Events_for_a_contract";
 import Logs_for_a_contract from "@/components/event_api/Logs_for_a_contract";
+import Metadata_by_symbol from "@/components/Metadata_by_symbol";
 import Run_smartContract_functions from "@/components/Run_smartContract_functions";
 import React from "react";
 
@@ -17,6 +18,7 @@ export default function Home() {
       <div> <Run_smartContract_functions/> </div>
       <div> <Logs_for_a_contract/> </div>
       <div> <Events_for_a_contract/> </div>
+      <div> <Metadata_by_symbol/> </div>
     </>
   );
 }
